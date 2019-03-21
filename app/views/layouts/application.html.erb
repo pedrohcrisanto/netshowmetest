@@ -27,6 +27,7 @@
   <% if user_signed_in? %>
   Logado como: 
   <strong><%= current_user.email %></strong> 
+  <%= link_to 'Videos de Todos os Usuarios', root_path, :class => 'btn btn-info' %> 
   <%= link_to 'Videos do Usuario', videos_path, :class => 'btn btn-info' %> 
   <%= link_to 'Editar perfil', edit_user_registration_path, :class => 'btn btn-warning' %> 
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn btn-danger'  %>

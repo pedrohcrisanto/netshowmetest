@@ -30,5 +30,4 @@ Para realizar Testes
 ```sh
 $ docker-compose run --rm app bundle exec rspec
 ```
-## Outras informações
-Aplicação no Heroku
+## Aplicação no Heroku

@@ -36,7 +36,7 @@ gem 'cancancan'
 gem 'kaminari'
 gem 'bootstrap', '~> 4.3.1'
 gem 'adminlte-rails'
-gem 'sprockets-rails', :require => 'sprockets/railtie'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

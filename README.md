@@ -1,23 +1,34 @@
-## NetShow.me Test
-Aplicação desenvolvida por Pedro Crisanto para fins de teste de conhecimento.
+## NetShowme - Test
+
 ## Configuração
+
 Clone o projeto
+
+```sh
 $ git clone https://github.com/pedrohcrisanto/netshowmetest.git
+```
 
 Instale as dependências
-$ cd netshowmetest
-$ docker-compose run --rm app bundle update
+```sh
+$ cd /netshowmetes/
+$ docker-compose run --rm app bundle install
+```
 
-
-Crie o banco e migre as tabelas
+Crie o banco e as tabelas
+```sh
 $ docker-compose run --rm app bundle exec rails db:create db:migrate
+```
 
 Rode a aplicação
+```sh
 $ docker-compose up
-Abra o seu navegador e navegue para 'localhost:3000'
+```
 
-Testar aplicação
+Abra o seu navegador(de preferência Chrome ou Firefox) e navegue para `localhost:3000`
+
+Para realizar Testes
+```sh
 $ docker-compose run --rm app bundle exec rspec
-
-<h2>Outras informações</h2>
-Aplicação no Heroku => 
+```
+## Outras informações
+Aplicação no Heroku

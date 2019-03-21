@@ -10,7 +10,7 @@ $ git clone https://github.com/pedrohcrisanto/netshowmetest.git
 
 Instale as dependências
 ```sh
-$ cd /netshowmetes/
+$ cd /netshowmetest/
 $ docker-compose run --rm app bundle install
 ```
 

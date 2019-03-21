@@ -1,24 +1,31 @@
-<p id="notice"><%= notice %></p>
-
+<div class="box box-primary container box-body">
 <p>
   <strong>Name:</strong>
+  <br>
   <%= @video.name %>
 </p>
 
 <p>
   <strong>Url:</strong>
+  <br>
   <%= @video.url %>
+  <div id="player"></div>
+  <script>
+    var player = new Clappr.Player({source: "<%= @video.url %>", parentId: "#player", autoPlay: true});
+  </script>
 </p>
 
 <p>
   <strong>View:</strong>
+  <br>
   <%= @video.view %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @video.user %>
+  <br>
+  <%= @video.user.email %>
 </p>
-
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+</div>
+<%= link_to 'Editar', edit_video_path(@video) , class: 'btn btn-primary'%>
+<%= link_to 'Voltar', videos_path , class: 'btn btn-primary'%>

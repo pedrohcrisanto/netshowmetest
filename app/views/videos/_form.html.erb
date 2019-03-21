@@ -10,28 +10,22 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+<div class="box box-primary container box-body">
+<div class="form-row">
+  <div class="form-group col-md-12">
+    <%= form.label :name , "Nome*" %>
+    <%= form.text_field :name , class: "form-control"%>
   </div>
 
-  <div class="field">
-    <%= form.label :url %>
-    <%= form.text_field :url %>
+  <div class="form-group col-md-12">
+    <%= form.label :url , "Url*" %>
+    <%= form.text_field :url , class: "form-control"%>
   </div>
 
-  <div class="field">
-    <%= form.label :view %>
-    <%= form.number_field :view %>
-  </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+  <div class="box-footer">
+    <%= form.submit "Cadastrar", class:"btn btn-success"%>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  </div>
   </div>
 <% end %>

@@ -3,18 +3,18 @@ require 'rails_helper'
 RSpec.describe "videos/show", type: :view do
   before(:each) do
     @video = assign(:video, Video.create!(
-      :name => "Name",
-      :url => "Url",
-      :view => 2,
-      :user => nil
+      :name => FFaker::Movie.title,
+      :url => FFaker::Youtube.embed_url,
+      :view => FFaker::Random.rand(1..9999999),
+      :user => FFaker::Random.rand(1..9999999)
     ))
   end
 
   it "renders attributes in <p>" do
     render
-    expect(rendered).to match(/Name/)
-    expect(rendered).to match(/Url/)
-    expect(rendered).to match(/2/)
-    expect(rendered).to match(//)
+    expect(rendered).to match(FFaker::Movie.title)
+    expect(rendered).to match(FFaker::Youtube.embed_url)
+    expect(rendered).to match(FFaker::Random.rand(1..9999999))
+    expect(rendered).to match(FFaker::Random.rand(1..9999999))
   end
 end

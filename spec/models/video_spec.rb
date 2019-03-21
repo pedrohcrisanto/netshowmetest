@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Video, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "Testar Model Video" do
+    video = create(:name, :url, :view, :user)
+    expect(video).to be_valid
+  end
 end

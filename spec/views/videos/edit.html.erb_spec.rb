@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe "videos/edit", type: :view do
   before(:each) do
     @video = assign(:video, Video.create!(
-      :name => "MyString",
-      :url => "MyString",
-      :view => 1,
-      :user => nil
+      :name => FFaker::Movie.title,
+      :url => FFaker::Youtube.embed_url,
+      :view => FFaker::Random.rand(1..9999999),
+      :user => FFaker::Random.rand(1..9999999)
     ))
   end
 
